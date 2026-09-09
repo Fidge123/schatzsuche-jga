@@ -9,6 +9,6 @@
     "urls": "node scripts/print-urls.mjs"
   },
   "engines": {
-    "node": ">=20"
+    "node": ">=24"
   }
 }
