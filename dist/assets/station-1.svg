@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-labelledby="title desc">
+  <title id="title">Station 1: EULE</title>
+  <desc id="desc">Dekorative Illustration für die Schatzsuche</desc>
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="45%" r="60%">
+      <stop offset="0" stop-color="#38bdf8" stop-opacity=".65"/>
+      <stop offset="1" stop-color="#172554" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="14" stdDeviation="15" flood-opacity=".25"/></filter>
+  </defs>
+  <rect width="960" height="600" fill="#172554"/>
+  <circle cx="480" cy="270" r="300" fill="url(#glow)"/>
+  <path d="M0 490 Q170 410 330 500 T670 485 T960 470 V600 H0Z" fill="#071a16" opacity=".6"/>
+  <g fill="#fef3c7" opacity=".7">
+    <circle cx="130" cy="120" r="4"/><circle cx="790" cy="105" r="5"/><circle cx="850" cy="245" r="3"/><circle cx="205" cy="305" r="3"/>
+  </g>
+  <g filter="url(#shadow)">
+    <circle cx="480" cy="265" r="152" fill="#fef3c7"/>
+    <circle cx="480" cy="265" r="132" fill="none" stroke="#38bdf8" stroke-width="4" stroke-dasharray="4 13"/>
+    <text x="480" y="285" text-anchor="middle" fill="#172554" font-family="system-ui, sans-serif" font-weight="800" font-size="86">1</text>
+  </g>
+  <text x="480" y="492" text-anchor="middle" fill="#fef3c7" font-family="system-ui, sans-serif" font-weight="700" font-size="32" letter-spacing="8">EULE</text>
+</svg>
