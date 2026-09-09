@@ -1,6 +1,6 @@
 export const stations = [
   {
-    route: "7f3a9c2e-waldkauz-91b6d4f8",
+    route: "7f3a9c2e",
     number: 1,
     title: "Der schweigsame Wächter",
     lead: "Ich sehe die Nacht, doch die Sonne mich blendet. Ich rufe im Wald, wenn der Tag längst beendet.",
@@ -12,7 +12,7 @@ export const stations = [
     colors: ["#172554", "#38bdf8", "#fef3c7"]
   },
   {
-    route: "b84d1f6a-kompass-3e709c25",
+    route: "b84d1f6a",
     number: 2,
     title: "Vier Wege, ein Ziel",
     lead: "Ich habe eine Nadel, doch ich kann nicht nähen. Ich zeige euch Wege, ohne selbst zu gehen.",
@@ -24,7 +24,7 @@ export const stations = [
     colors: ["#134e4a", "#2dd4bf", "#fef9c3"]
   },
   {
-    route: "2c91e7bd-bruecke-a64f830d",
+    route: "2c91e7bd",
     number: 3,
     title: "Über dem Wasser",
     lead: "Ich habe einen Rücken, doch kein Gesicht. Viele gehen über mich, ich bewege mich nicht.",
@@ -36,7 +36,7 @@ export const stations = [
     colors: ["#4c1d95", "#c084fc", "#fdf4ff"]
   },
   {
-    route: "e5a02d79-schluessel-4bc8136f",
+    route: "e5a02d79",
     number: 4,
     title: "Der eiserne Bart",
     lead: "Ich habe Zähne, doch beiße ich nie. Dreht man mich richtig, öffne ich sie.",
@@ -48,7 +48,7 @@ export const stations = [
     colors: ["#78350f", "#f59e0b", "#fffbeb"]
   },
   {
-    route: "93ce4a71-schatztruhe-d2086fb5",
+    route: "93ce4a71",
     number: 5,
     title: "Das letzte Schloss",
     lead: "Fünf Stationen liegen hinter euch. Setzt eure gefundenen Ziffern in der richtigen Reihenfolge zusammen.",

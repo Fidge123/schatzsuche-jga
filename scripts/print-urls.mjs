@@ -1,8 +1,10 @@
 import { stations } from "../src/stations.mjs";
+import { defaultSiteUrl, printRoute, resolveSiteUrl } from "../src/config.mjs";
 
-const fallback = "https://fidge123.github.io/schatzsuche-jga/";
-const baseUrl = new URL(process.argv[2] ?? fallback);
+const baseUrl = resolveSiteUrl(process.argv[2] ?? defaultSiteUrl);
 
 for (const station of stations) {
   console.log(`Station ${station.number}: ${new URL(`${station.route}/`, baseUrl)}`);
 }
+
+console.log(`Druckbogen: ${new URL(`${printRoute}/`, baseUrl)}`);

@@ -1,9 +1,13 @@
 import { mkdirSync, rmSync, writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
+import QRCode from "qrcode";
+import { defaultSiteUrl, printRoute, resolveSiteUrl } from "../src/config.mjs";
 import { stations } from "../src/stations.mjs";
 
 const root = fileURLToPath(new URL("../", import.meta.url));
 const dist = `${root}dist`;
+const siteUrl = resolveSiteUrl(process.env.SITE_URL ?? defaultSiteUrl);
+const stationUrl = ({ route }) => new URL(`${route}/`, siteUrl).href;
 const escapeHtml = (value) =>
   value.replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;");
 
@@ -96,8 +100,32 @@ details p { padding: .4rem 0 .2rem; }
 .welcome .card { padding: clamp(2rem, 8vw, 4.5rem) clamp(1.25rem, 7vw, 3.5rem); }
 .mark { display: grid; width: 5rem; height: 5rem; margin: 0 auto 1.4rem; place-items: center; border: 1px solid #61d6a6; border-radius: 50%; color: #fff0ae; font-size: 2.25rem; }
 .welcome p { max-width: 31rem; margin: 1.4rem auto 0; color: #d8d2c7; font-size: 1.08rem; line-height: 1.6; }
+.print-sheet > header { margin-bottom: 1.5rem; text-align: center; }
+.print-sheet > header h1 { font-size: clamp(2rem, 8vw, 3.2rem); }
+.print-sheet > header p { color: #d8d2c7; line-height: 1.5; }
+.print-action { min-height: 2.75rem; padding: .7rem 1.1rem; border: 0; border-radius: 999px; background: #8cf0c5; color: #071a16; cursor: pointer; font: inherit; font-weight: 800; }
+.qr-grid { display: grid; gap: 1rem; }
+.qr-card { margin: 0; padding: 1rem; border-radius: 1rem; background: #fff; color: #111; text-align: center; break-inside: avoid; }
+.qr-code { display: block; width: min(100%, 14rem); height: auto; margin-inline: auto; }
+.qr-card h2 { margin: .6rem 0 .25rem; font-size: 1.2rem; }
+.qr-card p { margin: 0; font-size: .72rem; line-height: 1.35; overflow-wrap: anywhere; }
 @media (min-width: 48rem) { main { padding-top: 2.5rem; } .card { border-radius: 2rem; } }
+@media (min-width: 38rem) { .qr-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (prefers-reduced-motion: no-preference) { .card { animation: arrive .55s ease-out both; } @keyframes arrive { from { opacity: 0; transform: translateY(12px); } } }
+@media print {
+  @page { size: A4 portrait; margin: 10mm; }
+  :root { color-scheme: light; background: #fff; color: #000; }
+  body { min-width: 0; background: #fff; }
+  main { width: 100%; padding: 0; }
+  .print-sheet > header { margin-bottom: 4mm; }
+  .print-sheet > header h1 { color: #000; font-family: system-ui, sans-serif; font-size: 18pt; }
+  .print-sheet > header p, .print-action { display: none; }
+  .qr-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4mm; }
+  .qr-card { padding: 4mm; border: .3mm solid #444; border-radius: 2mm; }
+  .qr-code { width: 42mm; }
+  .qr-card h2 { margin: 1.5mm 0 .5mm; font-size: 11pt; }
+  .qr-card p { font-size: 6.5pt; }
+}
 `;
 
 rmSync(dist, { recursive: true, force: true });
@@ -111,7 +139,42 @@ for (const station of stations) {
   mkdirSync(directory, { recursive: true });
   writeFileSync(`${directory}/index.html`, stationPage(station));
   writeFileSync(`${dist}/assets/station-${station.number}.svg`, illustration(station));
+  writeFileSync(`${dist}/assets/qr-${station.number}.svg`, await QRCode.toString(stationUrl(station), {
+    type: "svg",
+    errorCorrectionLevel: "M",
+    margin: 2,
+    width: 512,
+    color: { dark: "#071a16", light: "#ffffff" }
+  }));
 }
+
+const printDirectory = `${dist}/${printRoute}`;
+mkdirSync(printDirectory, { recursive: true });
+writeFileSync(`${printDirectory}/index.html`, pageShell({
+  title: "QR-Codes drucken",
+  description: "Druckbogen mit den QR-Codes aller Stationen",
+  assetPrefix: "../",
+  body: `
+      <section class="print-sheet">
+        <header>
+          <h1>QR-Codes der Schatzsuche</h1>
+          <p>Alle fünf Stationen auf einem A4-Druckbogen. Vor dem Verteilen jeden Code einmal testen.</p>
+          <button class="print-action" type="button" onclick="window.print()">Druckbogen drucken</button>
+        </header>
+        <div class="qr-grid">
+          ${stations.map((station) => {
+            const url = stationUrl(station);
+            return `<figure class="qr-card" data-url="${escapeHtml(url)}">
+              <img class="qr-code" src="../assets/qr-${station.number}.svg" alt="QR-Code für Station ${station.number}" width="512" height="512">
+              <figcaption>
+                <h2>Station ${station.number}</h2>
+                <p>${escapeHtml(url)}</p>
+              </figcaption>
+            </figure>`;
+          }).join("")}
+        </div>
+      </section>`
+}));
 
 writeFileSync(`${dist}/index.html`, pageShell({
   title: "Geheime Schatzsuche",
