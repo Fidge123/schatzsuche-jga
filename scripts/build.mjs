@@ -11,14 +11,13 @@ const stationUrl = ({ route }) => new URL(`${route}/`, siteUrl).href;
 const escapeHtml = (value) =>
   value.replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;");
 
-const pageShell = ({ title, description, body, assetPrefix = "" }) => `<!doctype html>
+const pageShell = ({ title, body, assetPrefix = "" }) => `<!doctype html>
 <html lang="de">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#173f35">
     <meta name="robots" content="noindex, nofollow">
-    <meta name="description" content="${escapeHtml(description)}">
     <title>${escapeHtml(title)} · Schatzsuche</title>
     <link rel="stylesheet" href="${assetPrefix}assets/site.css">
   </head>
@@ -34,19 +33,13 @@ const stationPage = (station) => pageShell({
   assetPrefix: "../",
   body: `
       <article class="card">
-        <p class="eyebrow">Station ${station.number} von ${stations.length}</p>
-        <img class="riddle-image" src="../assets/station-${station.number}.svg" alt="${escapeHtml(station.imageAlt)}" width="960" height="600">
         <div class="content">
           <h1>${escapeHtml(station.title)}</h1>
           <p class="lead">${escapeHtml(station.lead)}</p>
           <section class="question" aria-labelledby="frage-${station.number}">
-            <h2 id="frage-${station.number}">Eure Aufgabe</h2>
+            <h2 id="frage-${station.number}">Deine Aufgabe</h2>
             <p>${escapeHtml(station.question)}</p>
           </section>
-          <details>
-            <summary>Tipp anzeigen</summary>
-            <p>${escapeHtml(station.hint)}</p>
-          </details>
           <p class="next-step"><span aria-hidden="true">✦</span> ${escapeHtml(station.task)}</p>
         </div>
       </article>`
@@ -54,7 +47,7 @@ const stationPage = (station) => pageShell({
 
 const illustration = ({ number, symbol, colors }) => `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-labelledby="title desc">
-  <title id="title">Station ${number}: ${escapeHtml(symbol)}</title>
+  <title id="title">${escapeHtml(station.title)}</title>
   <desc id="desc">Dekorative Illustration für die Schatzsuche</desc>
   <defs>
     <radialGradient id="glow" cx="50%" cy="45%" r="60%">
@@ -88,7 +81,7 @@ main { width: min(100% - 1.25rem, 46rem); margin-inline: auto; padding: 1.25rem 
 .riddle-image { display: block; width: 100%; height: auto; aspect-ratio: 8 / 5; object-fit: cover; }
 .content { padding: clamp(1.25rem, 5vw, 2.4rem); }
 h1 { margin: 0; color: #fffdf7; font-family: Georgia, serif; font-size: clamp(2rem, 10vw, 3.6rem); line-height: .98; letter-spacing: -.025em; }
-.lead { margin: 1.4rem 0 1.75rem; color: #e7e1d5; font-family: Georgia, serif; font-size: clamp(1.15rem, 4.5vw, 1.45rem); line-height: 1.55; }
+.lead { margin: 1.4rem 0 1.75rem; color: #e7e1d5; font-family: Georgia, serif; line-height: 1.55; }
 .question { padding: 1.1rem 1.15rem; border-left: .25rem solid #61d6a6; border-radius: .2rem .8rem .8rem .2rem; background: rgba(97,214,166,.09); }
 .question h2 { margin: 0 0 .45rem; color: #8cf0c5; font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; }
 .question p, details p { margin: 0; line-height: 1.55; }
@@ -138,7 +131,6 @@ for (const station of stations) {
   const directory = `${dist}/${station.route}`;
   mkdirSync(directory, { recursive: true });
   writeFileSync(`${directory}/index.html`, stationPage(station));
-  writeFileSync(`${dist}/assets/station-${station.number}.svg`, illustration(station));
   writeFileSync(`${dist}/assets/qr-${station.number}.svg`, await QRCode.toString(stationUrl(station), {
     type: "svg",
     errorCorrectionLevel: "M",

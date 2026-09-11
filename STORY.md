@@ -1,4 +1,40 @@
-Rund um den Templiner See und den Schwielowsee treffen preußische Geschichte, eigenwillige Erfinder und uralte Legenden auf eine oft unberechenbare Havellandschaft. Hier sind fünf der kuriosesten Begebenheiten aus der Region. [tagesspiegel](https://www.tagesspiegel.de/potsdam/brandenburg/einsteins-kleines-paradies-1002982.html)
+# Im Auftrag der Admiralität
+
+Kapitän! Bevor du wieder in den sicheren Hafen der Ehe einläufst, wartet deine finale Bewährungsprobe auf den Havelseen. An Bord befindet sich eine gesicherte Schatztruhe, deren Inhalt für das Überleben der heutigen Crew unverzichtbar ist.
+
+Die Kiste ist mit einem Vorhängeschloss gesichert, das genau fünf Ziffern benötigt. Diese Zahlen sind jedoch nicht frei erfunden, sondern entlang unserer Route verborgen. Nur wer aufmerksam steuert, die Umgebung scannt und die Rätsel löst, wird am Ende auf dem Schwielowsee den Schatz befreien.
+
+## Logbuch 
+
+Trage jede gefundene Zahl sorgfältig in die vorgesehenen Felder deines Logbuchs ein, um den Code schrittweise zu vervollständigen:
+
+Ziffer 1: [        ]
+
+Ziffer 2: [        ]
+
+Ziffer 3: [        ]
+
+Ziffer 4: [        ]
+
+Ziffer 5: [        ]
+
+## Auftrag 1: Spähposten Pfaueninsel
+
+Setzt die Segel in Richtung Wannsee und steuert die geschichtsträchtige Pfaueninsel an. Das dortige weiße Lustschloss birgt das erste Geheimnis deiner Reise.
+
+Wie viele Fenster sind übereinander beim nördlichen Turm des Schlosses? Antwort A = [        ]
+
+## Kursberechnung zum nächsten Hinweis
+
+Um die nächste Aufgabe zu erhalten, musst du deine Antwort A in die Navigationsformel einsetzen. Löse die Rechenschritte. Navigiere zu diesen Koordinaten. 
+
+Du wirst eine kleine Hinweistafel mit drei grünen Schildern sehen. Stelle dich davor und schaue zum gelben Mast vor dir. Direkt dahinter siehst du einen Baum. Dort ist der nächste Hinweis versteckt.
+
+Nord-Koordinate: 52,36 [A*103 + 2] ° N
+
+Ost-Koordinate: 13,02 [A * 224] ° O
+
+---
 
 ## Bodenloser Bahndamm im Templiner See
 
@@ -6,26 +42,8 @@ Als in den 1950er-Jahren der Berliner Außenring gebaut wurde, planten die Plane
 
 Die Bauarbeiter sprachen ehrfürchtig von einem gigantischen **Wackelpudding**, der scheinbar bodenlos alles verschlang, was man hineinschüttete. Ganze 2,5 Millionen Kubikmeter Kies und Erdreich wurden per Schute im See versenkt. Die Trasse sackte immer wieder unvermittelt ab, presste gewaltige Schlammmassen nach oben und verringerte die Wassertiefe an manchen Stellen schlagartig von 22 auf 8 Meter. Erst nach Jahren fand das Bauwerk Halt, sodass Züge die Überquerung heute problemlos passieren. [tagesspiegel](https://www.tagesspiegel.de/potsdam/potsdam-mittelmark/ein-bahndamm-als-politikum-7758736.html)
 
-## Einsteins Jolle und die Caputher Trompete
-
-Von 1929 bis 1932 verbrachte Albert Einstein die Sommermonate in seinem Sommerhaus in Caputh und erkundete die Gewässer mit seinem Segelboot namens Tümmler. Das Kuriose daran: Der berühmte Physiker war bekennender **Nichtschwimmer** und trug grundsätzlich keine Rettungsweste. Regelmäßig geriet er bei seinen Gedankenflügen in heikle Lagen auf dem unberechenbaren Schwielowsee, sodass ihn besorgte Wassersportler mehrfach retten oder an Land schleppen mussten. [tagesspiegel](https://www.tagesspiegel.de/potsdam/brandenburg/einsteins-kleines-paradies-1002982.html)
-
-Um seine Ruhe zu wahren, verzichtete Einstein im Haus auf ein eigenes Telefon und nutzte die Leitung seines Nachbarn. Ging dort ein Anruf für die Familie ein, stieß der Nachbar in eine **Trompete**. Ein Ton galt der Adoptivtochter, zwei Töne der Hausangestellten und drei Töne seiner Ehefrau Elsa. Für das Genie selbst gab es kein Signal: Elsa nahm das Gespräch entgegen und entschied eigenhändig, ob der Anrufer wichtig genug war, um Alberts Arbeit zu unterbrechen. [blog.inberlin](https://blog.inberlin.de/2013/04/pfeif-auf-die-welt-komm-nach-caputh/)
-
 ## Die zickige Seilfähre Tussy
 
 Das Caputher Gemünde, die schmale Verbindung zwischen Templiner See und Schwielowsee, wird seit 1853 von einer Seilfähre überquert. Das Schiff hört auf den ungewöhnlichen Namen **Tussy** II. Die Benennung geht auf eine Stammtischlaune zu DDR-Zeiten zurück: Weil die damalige Fähre ständig technische Pannen hatte und im Betrieb als eigensinnig galt, taufte man sie spöttisch auf den Namen einer launischen Dame. Hartnäckig hält sich im Ort zudem das Gerücht, der Name sei eine augenzwinkernde Würdigung der früheren, resoluten Fährfrau Ursel gewesen. [schwielowsee](https://www.schwielowsee.de/leben-soziales/gemeinde-schwielowsee/caputh.html)
 
 Für zusätzliche Erheiterung sorgte ein ortsfremder Fahrer, der sich vor einigen Jahren blind auf sein Navigationsgerät verließ und ungebremst in das Wasser steuerte. Die Software hatte an der Engstelle eine Straßenbrücke statt einer Fährverbindung verzeichnet. Da sich die Seilfähre in diesem Moment am anderen Ufer befand, landete das Auto mitten im **Fluss**. [tagesspiegel](https://www.tagesspiegel.de/potsdam/brandenburg/einsteins-kleines-paradies-1002982.html)
-
-## Der kachelreine Fliesensaal von Caputh
-
-Im Schloss Caputh direkt am Seeufer liegt einer der eigenwilligsten Prunkräume der Mark: der Fliesensaal im Souterrain. Die Wände sind lückenlos mit rund 7.500 blau-weißen niederländischen **Fayencen** bedeckt, die kunstvolle Landschaften und Handwerksszenen zeigen. Den Anstoß dazu gab der sparsame Soldatenkönig Friedrich Wilhelm I., der den kühlen Raum an heißen Tagen für sein Tabakskollegium zweckentfremdete.
-
-Während der Monarch mit seinen Offizieren stundenlang Tabak qualmte und Bier trank, ging es feuchtfröhlich zu. Wenn beim Gelage Krüge zu Bruch gingen oder Schmutz entstand, erwies sich die Wandverkleidung als praktische **Glanzleistung**: Die Bediensteten mussten keine empfindlichen Parkettböden wienern, sondern schütteten einfach Eimer mit frischem Seewasser aus, um den gefliesten Saal im Handumdrehen sauber zu spülen.
-
-## Die Fischerkirche im umgedrehten Kahn
-
-Am Südufer des Schwielowsees liegt das Dorf Ferch, das laut einer Sage über Nacht von einer gütigen **Waldfee** herbeigezaubert worden sein soll, um einen verirrten Ritter an Ort und Stelle zu binden. Mindestens genauso bemerkenswert wie diese Legende ist das Wahrzeichen des Ortes, die im 17. Jahrhundert errichtete Fischerkirche. [chronikvonferch](https://www.chronikvonferch.de/die-chronik-von-ferch/die-sage-von-der-fee/)
-
-Weil die einheimischen Fischer kein Geld für Baumeister besaßen, zimmerten sie das Dach des Gotteshauses exakt wie den Rumpf eines umgedrehten **Fischerkahns**. Wer im Kirchenschiff nach oben blickt, schaut direkt auf die hölzernen Spanten eines Schiffsbodens. Die Deckenbemalung spiegelt den Wolkenhimmel über dem Schwielowsee wider, der Tragbalken des Kirchturms gleicht einem Steuerruder und ein schwebender Taufengel wacht wie eine hölzerne Galionsfigur über der Gemeinde. [de.wikipedia](https://de.wikipedia.org/wiki/Ferch)
