@@ -4,7 +4,7 @@ export const stations = [
     title: "Die grünen Signale",
     lead: "In den 1950er-Jahren sollte hier der Berliner Außenring mitten durch den See führen. Was als Routineprojekt startete, endete in einer gigantischen Schlammschlacht. Unter fünf Metern Wasser lauerte eine 48 Meter dicke Schicht aus zähem Faulschlamm, den die Bauleute ehrfürchtig als riesigen Wackelpudding bezeichneten. Ganze 2,5 Millionen Kubikmeter Kies wurden per Schute versenkt, doch der Untergrund gab immer wieder nach und drückte Schlammfontänen nach oben. Erst nach Jahren zähen Ringens fand das Fundament Halt. Nimm dir daran ein Vorbild: Wahre Standfestigkeit beweist sich erst unter Belastung!",
     question: "Wie heißt der schwimmende Imbiss ganz in der Nähe? Zählt die Buchstaben des Namens (ohne Artikel) für Antwort B.",
-    task: "Koordinaten: 52,3 [A] [B*13 -1] [B / 2] ° N - 12,98 [A] [A*B +2]° O",
+    task: "Koordinaten: 52,3 [A] [B*13 -1] [B / 2] ° N  12,98 [A] [A*B +2]° O",
     colors: ["#172554", "#38bdf8", "#fef3c7"]
   },
   {
